@@ -30,9 +30,9 @@ gulp.task('serve', ['css'], function() {
     gulp.watch('*.html').on('change', browserSync.reload);
 });
 
-//var injectSvgOptions = { base: '/src' };
+var injectSvgOptions = { base: './' };
 gulp.task('svg', function() {
     return gulp.src('./*.html')
-        //.pipe(svg(injectSvgOptions))
+        .pipe(svg(injectSvgOptions))
         .pipe(gulp.dest('public/'));
 });
