@@ -1,10 +1,13 @@
+html, body, .container
+  height: 100%
+
 *, *:before, *:after
   box-sizing: border-box
   outline: none !important
 
 body
   color: $text-color
-  background: #fff
+  background: $light-color
   font-family: 'Roboto', sans-serif
   font-size: $font-size
   font-weight: 300
@@ -26,9 +29,12 @@ a
 
 .container
   max-width: 900px
-  padding: 0 15px
+  padding: 100px 15px
   margin: 0 auto
   @include clearfix
+  display: flex
+  flex-direction: row
+  justify-content: space-between
 
 ul
   list-style: none
