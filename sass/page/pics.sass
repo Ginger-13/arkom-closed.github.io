@@ -1,0 +1,8 @@
+.light-obj
+  background: url($img-dir + "sun.svg")
+  @include square(80px)
+  position: absolute
+  right: -75px
+  bottom: 170px
+  body.night &
+    background: url($img-dir + "moon.svg")
