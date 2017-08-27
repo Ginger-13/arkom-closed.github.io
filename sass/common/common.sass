@@ -3,15 +3,11 @@
   outline: none !important
 
 body
-  color: $main-color
+  color: $text-color
   background: #fff
-  font-family: "Open Sans", sans-serif
+  font-family: "Open Sans", sans-serif //todo
   font-size: $font-size
   font-weight: 300
-  @include desktop
-    padding-bottom: 46px
-  @include mobile
-    font-size: $font-size-mobile
 
 a
   color: $decoration-color
@@ -29,7 +25,7 @@ a
     color: $decoration-color
 
 .container
-  max-width: 1220px + (15*2px)
+  max-width: 900px
   padding: 0 15px
   margin: 0 auto
   @include clearfix
