@@ -27,7 +27,7 @@ var $body = $('body');
 
 function circulating () {
     $block.circulate({
-        speed: 1000,
+        speed: 1200,
         height: 250,
         width: 600
     });
@@ -43,4 +43,4 @@ setInterval(function () {
     } else {
         $body.addClass('night')
     }
-}, 4000);
+}, 4800);
