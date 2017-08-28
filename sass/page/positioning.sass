@@ -11,4 +11,13 @@
   justify-content: space-between
 
 .logo
-  margin: 0 0 40px
+  max-width: 30%
+  margin: 0 0 30px
+  path:first-child
+    fill: $accent !important
+  line
+    stroke: $lighter-color
+
+  body.night &
+    path, polygon
+      fill: #fff

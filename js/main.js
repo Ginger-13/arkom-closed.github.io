@@ -25,19 +25,18 @@
 var $block = $(".light-obj");
 var $body = $('body');
 
-/*$block.circulate({
-    speed: 1000,
-    height: 250,
-    width: 600,
-    loop: true
-});*/
-
-setInterval(function () {
+function circulating () {
     $block.circulate({
         speed: 1000,
         height: 250,
         width: 600
     });
+}
+
+circulating();
+
+setInterval(function () {
+    circulating();
 
     if ($body.hasClass('night')) {
         $body.removeClass('night')
