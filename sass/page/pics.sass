@@ -14,3 +14,44 @@
     top: 160px
     transform: scale(-1, -1)
     z-index: 0
+
+.cloud
+  background: url($img-dir + "cloud.svg") no-repeat
+  position: absolute
+  opacity: .3
+  animation: pulse 3s linear infinite
+
+  &:first-child
+    top: -50%
+    left: -30%
+    @include square(125px)
+
+  &:nth-child(2)
+    top: -82%
+    left: 4%
+    animation-delay: .5s
+    @include square(100px)
+
+  &:nth-child(3)
+    top: -30%
+    left: 24%
+    animation-delay: 1s
+    @include square(90px)
+
+  &:nth-child(4)
+    top: -70%
+    left: 56%
+    animation-delay: 1.5s
+    @include square(150px)
+
+@keyframes pulse
+  0%
+    transform: translate(0, 0)
+  25%
+    transform: translate(9px, 0)
+  50%
+    transform: translate(15px, 6px)
+  75%
+    transform: translate(9px, 0)
+  100%
+    transform: translate(0, 0)
