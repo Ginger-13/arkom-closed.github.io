@@ -21,3 +21,16 @@
         $digitHour.text(zeroPad(hour));
     }, 1000);
 })();
+
+//var $block = $(".light-obj");
+
+/*$(".light-obj").circulate({
+    height: 200,
+    loop: true
+});*/
+
+$(".light-obj").circulate({
+    height: 200,
+    width: 600,
+    loop: true
+});
