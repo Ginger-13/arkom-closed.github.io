@@ -22,15 +22,20 @@
     }, 1000);
 })();
 
-//var $block = $(".light-obj");
+var $block = $(".light-obj");
+var $body = $('body');
 
-/*$(".light-obj").circulate({
-    height: 200,
-    loop: true
-});*/
-
-$(".light-obj").circulate({
-    height: 200,
+$block.circulate({
+    speed: 1000,
+    height: 250,
     width: 600,
     loop: true
 });
+
+setInterval(function () {
+    if ($body.hasClass('night')) {
+        $body.removeClass('night')
+    } else {
+        $body.addClass('night')
+    }
+}, 4000);
