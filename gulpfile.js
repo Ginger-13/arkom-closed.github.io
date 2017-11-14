@@ -4,7 +4,6 @@ var minifyCSS    = require('gulp-minify-css');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var browserSync  = require('browser-sync').create();
-var svg          = require('gulp-inject-svg');
 
 
 gulp.task('css', function() {
@@ -29,11 +28,4 @@ gulp.task('serve', ['css'], function() {
     gulp.watch('./sass/**/*.sass', ['css']);
     gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('./js/*.js').on('change', browserSync.reload);
-});
-
-var injectSvgOptions = { base: './' };
-gulp.task('svg', function() {
-    return gulp.src('./*.html')
-        .pipe(svg(injectSvgOptions))
-        .pipe(gulp.dest('public/'));
 });
